@@ -11,14 +11,14 @@ menu:
           weight: 30
         - name: Articles
           url: /articles/
-          weight: 20
+          weight: 10
         - name: Projects
           url: /projects/
-          weight: 15
+          weight: 20
 
-     # - name: Categories
-        #   url: /categories/
-        #   weight: 10
+        - name: Categories
+          url: /categories/
+          weight: 15
         # - name: new Tab
         #   url: /newtab/
         #   weight: defines order of tabs
@@ -31,7 +31,7 @@ params:
 
     defaultTheme: auto
     # disableThemeToggle: true
-    ShowShareButtons: true
+    ShowShareButtons: false
     ShowReadingTime: true
     displayFullLangName: true
     ShowBreadCrumbs: true
@@ -44,18 +44,18 @@ params:
         title: MizouziE
         description: |
 
-          Hello, I am Sam.
-           I am a web application developer. 
+          Hello, I am Sam
+            the web application developer. 
         
 
-          This is a minimalistic theme template for websites.
-        imageUrl: "/images/profile.png"
+          Here I'll show you some of what I can do, as well as a bunch of stuff that I think about.
+        imageUrl: "/images/profile-pic.png"
         imageTitle: my image
         # imageWidth: 120
         # imageHeight: 120
         buttons:
-            - name: Don't click me
-              url: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+            - name: About me
+              url: /about/
     mainSections:
       - articles
 
@@ -68,6 +68,8 @@ params:
           url: "https://www.linkedin.com/in/sam-anglin/"
         - name: twitter
           url: "https://twitter.com/mizouzie"
+        - name: instagram
+          url: "https://www.instagram.com/mizouzie/"
 
       # add more social icons. find more in svg.html file
       # - name: youtube
