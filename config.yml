@@ -62,18 +62,18 @@ params:
     socialIcons:
         # - name: buymeacoffee
           # url: "https://ko-fi.com/heycharlola"
-        - name: github
-          url: "https://github.com/mizouzie"
-        - name: linkedin
-          url: "https://www.linkedin.com/in/sam-anglin/"
+        - name: youtube
+          url: "https://www.youtube.com/mizouzie"
         - name: twitter
           url: "https://twitter.com/mizouzie"
+        - name: github
+          url: "https://github.com/mizouzie"
         - name: instagram
           url: "https://www.instagram.com/mizouzie/"
+        - name: linkedin
+          url: "https://www.linkedin.com/in/sam-anglin/"
 
       # add more social icons. find more in svg.html file
-      # - name: youtube
-      #   url: yoururl
       # - name: facebook
       #   url: yoururl
 
