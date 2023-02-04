@@ -34,8 +34,6 @@
     {{- .Summary | default (printf "%s - %s" .Title  .Site.Title) }}{{- else }}
     {{- with .Site.Params.description }}{{ . }}{{- end }}{{- end }}{{- end -}}">
 <meta property="twitter:image" content="{{- with .Params.ogimage }}{{ index . 0 | absURL  }}{{- else }}{{ .Site.Params.assets.ogImage | default "/images/social.png" | absURL }}{{- end }}">
-<meta property="twitter:image:width" content="{{- with .Params.ogimage }}{{ index . 1 }}{{- else }}{{ .Site.Params.assets.ogImageWidth | default 1190 }}{{- end }}">
-<meta property="twitter:image:height" content="{{- with .Params.ogimage }}{{ index . 2 }}{{- else }}{{ .Site.Params.assets.ogImageHeight | default 627 }}{{- end }}">
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:site" content="@mizouzie">
 <meta property="twitter:creator" content="@mizouzie">
