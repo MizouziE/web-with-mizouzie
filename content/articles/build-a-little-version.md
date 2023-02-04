@@ -10,6 +10,10 @@ tags:
 - laravel
 - api
 - learning
+ogimage:
+- /images/build-a-little-version.png
+- 568
+- 257
 ---
 
 ![shrugging builder](/images/build-a-little-version.png)

@@ -10,6 +10,10 @@ tags:
 - self-care
 - mental health
 - learning
+ogimage:
+- "/images/me.jpeg"
+- 1295
+- 973
 ---
 
 ![Sam reading through old posts](/images/me.jpeg)

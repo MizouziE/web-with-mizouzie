@@ -1,4 +1,4 @@
 ---
 title: Projects
 ---
-This is the projects list page.
+Here are a few projects both personal and work related that I have worked on.

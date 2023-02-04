@@ -10,6 +10,10 @@ tags:
 - laravel
 - livewire
 - alpineJS
+ogimage:
+- /images/quickAdminPanel.png
+- 1052
+- 489
 ---
 
 ![QuickAdminPanel landing page](/images/quickAdminPanel.png)

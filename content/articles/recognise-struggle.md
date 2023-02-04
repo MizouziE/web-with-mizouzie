@@ -9,6 +9,10 @@ tags:
 - web dev
 - self-care
 - mental health
+ogimage:
+- /images/recognise-struggle.jpeg
+- 400
+- 283
 ---
 
 ![Sisyphus pushing his stone uphill](/images/recognise-struggle.jpeg)

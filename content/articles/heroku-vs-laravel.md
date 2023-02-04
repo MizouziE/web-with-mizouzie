@@ -9,6 +9,10 @@ tags:
 - web dev
 - heroku
 - laravel
+ogimage:
+- /images/heroku-vs-laravel.jpeg
+- 497
+- 380
 ---
 
 ![Heroku (Heihachi) against Laravel (Kazuya)](/images/heroku-vs-laravel.jpeg)

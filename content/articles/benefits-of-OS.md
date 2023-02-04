@@ -9,6 +9,10 @@ tags:
 - web dev
 - open source
 - learning
+ogimage:
+- /images/benefits-of-OS.jpeg
+- 640
+- 425
 ---
 
 ![All puns intentional](/images/benefits-of-OS.jpeg)

@@ -9,6 +9,10 @@ tags:
 - web dev
 - self-care
 - mental health
+ogimage:
+- /images/l-i-f-t.jpeg
+- 535
+- 329
 ---
 
 ![Wise words, let me tell you why....](/images/l-i-f-t.jpeg)

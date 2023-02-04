@@ -9,6 +9,10 @@ tags:
 - web dev
 - html
 - meta tag
+ogimage:
+- /images/enkle-thumb.png
+- 921
+- 720
 ---
 
 ![example of thumbnail checking](/images/enkle-thumb.png)

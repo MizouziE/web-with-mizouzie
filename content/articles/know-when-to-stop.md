@@ -9,6 +9,10 @@ tags:
 - web dev
 - self-care
 - mental health
+ogimage:
+- /images/know-when-to-stop.jpeg
+- 850
+- 370
 ---
 
 ![know when to stop!](/images/know-when-to-stop.jpeg)

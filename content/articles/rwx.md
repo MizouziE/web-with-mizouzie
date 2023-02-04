@@ -9,6 +9,10 @@ tags:
 - web dev
 - documentation
 - learning
+ogimage:
+- /images/rwx.jpeg
+- 510
+- 340
 ---
 
 ![working on a laptop](/images/rwx.jpeg)
