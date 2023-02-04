@@ -86,6 +86,8 @@ params:
           apple_touch_icon: "/images/apple-touch-icon.png"
           safari_pinned_tab: "/images/apple-touch-icon.png"
           ogImage: "/images/social.png"
+          ogImageWidth: 1190
+          ogImageHeight: 627
 
     description: "MizozuiE the web app developer, on this page you'll find contact details, a blog, links to social media and other interesting projects that have been worked on."
 
