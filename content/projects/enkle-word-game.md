@@ -6,6 +6,10 @@ type: page
 topic: project
 link: "https://enkle-word-game.github.io/enkle/"
 image: "https://enkle-word-game.github.io/enkle/public/images/winner.png"
+tags:
+- JavaScript
+- learning
+- GitHub
 ---
 
 

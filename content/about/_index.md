@@ -21,6 +21,8 @@ type: page
 - Skating
 - Mountainbiking
 - Bass music
+- Psychology
+- Philosophy
 
 Having spent what I consider to be a great deal of time consuming content over the last few decades, I felt it was time to be more productive and start creating rather than just consuming. That combined with my recently learned skills of web development meant that I should just create a website like this one right here.
 

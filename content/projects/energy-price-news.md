@@ -6,6 +6,11 @@ type: page
 topic: project
 link: "https://energy-price-news.nosweat.cloud/"
 image: "https://energy-price-news.nosweat.cloud/img/energy-prices-api-socials.png"
+tags:
+- open source
+- api
+- nodeJS
+- GitHub
 ---
 
 
