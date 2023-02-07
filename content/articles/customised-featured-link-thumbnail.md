@@ -4,7 +4,7 @@ description: How to make sure that any thumbnail of a link shared to my page loo
 draft: false
 date: "2022-04-19"
 categories:
-- Development
+- web development
 tags:
 - web dev
 - html

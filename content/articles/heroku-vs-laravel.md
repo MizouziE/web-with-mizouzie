@@ -4,7 +4,7 @@ description: Deploying a Laravel app on a (then) popular free hosting platform p
 draft: false
 date: "2022-04-26"
 categories:
-- Development
+- web development
 tags:
 - web dev
 - heroku

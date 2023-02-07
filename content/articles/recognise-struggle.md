@@ -4,7 +4,7 @@ description: It is what it is. Learn what you can.
 draft: false
 date: "2022-05-18"
 categories:
-- Development
+- self development
 tags:
 - web dev
 - self-care

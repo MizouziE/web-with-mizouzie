@@ -4,7 +4,7 @@ description: There are so many good things about Open Source, but here are my cu
 draft: false
 date: "2022-04-29"
 categories:
-- Development
+- web development
 tags:
 - web dev
 - open source

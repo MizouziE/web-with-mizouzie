@@ -4,7 +4,7 @@ description: My first impression when using a third party tool to speed up the d
 draft: false
 date: "2022-04-20"
 categories:
-- Development
+- web development
 tags:
 - web dev
 - laravel

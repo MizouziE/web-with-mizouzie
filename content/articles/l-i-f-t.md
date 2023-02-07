@@ -4,7 +4,8 @@ description: It's not bad advice when I say Leave It For Tomorrow!
 draft: false
 date: "2022-05-31"
 categories:
-- Development
+- web development
+- self development
 tags:
 - web dev
 - self-care

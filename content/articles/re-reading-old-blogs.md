@@ -4,9 +4,8 @@ description: Having finally made a site to house my own work, using old material
 draft: false
 date: "2023-02-02"
 categories:
-- Development
+- self development
 tags:
-- web dev
 - self-care
 - mental health
 - learning

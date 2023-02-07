@@ -4,7 +4,7 @@ description: I wrote a big piece of documentation  recently. Here's how it drast
 draft: false
 date: "2022-08-09"
 categories:
-- Development
+- web development
 tags:
 - web dev
 - documentation

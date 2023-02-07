@@ -4,7 +4,7 @@ description: Docker is an invaluable piece to add to any tech stack for a multit
 draft: false
 date: "2023-02-05"
 categories:
-- Development
+- web development
 tags:
 - web dev
 - docker

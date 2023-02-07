@@ -4,7 +4,7 @@ description: It is vitally important to keep track of yourself when working. Let
 draft: false
 date: "2022-04-22"
 categories:
-- Development
+- self development
 tags:
 - web dev
 - self-care

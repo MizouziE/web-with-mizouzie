@@ -4,7 +4,7 @@ description: Been a while since I wrote a longer article, so here's a longer art
 draft: false
 date: "2022-05-15"
 categories:
-- Development
+- web development
 tags:
 - web dev
 - laravel
