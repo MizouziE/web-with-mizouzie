@@ -2,7 +2,7 @@
 title: Developing a Laravel Application using Tinker
 description: The Laravel framework has a huge amount of helpful features, let's take a deeper look at one of the most powerful. Tinker.
 draft: false
-date: "2023-02-09"
+date: "2023-02-08"
 categories:
 - web development
 tags:
