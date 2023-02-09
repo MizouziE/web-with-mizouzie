@@ -210,7 +210,7 @@ Now whenever it is needed, `$faker` can be called and chained with any of its me
 
 The biggest time saver for me is assigning commonly used classes to variables, just like that example above with faker. I'll often assign a `$user = User::first()` if I know I will be repeatedly calling on a single user instance.
 
-The only thing with variables is that they do not persist from session to session. If you close Tinker, you will lose all variables assigned during that session. However the history will be availble between sessions, so in true "terminal user" fashion, you can find all your previously entered commands by hitting the `↑` key (...repeatedly).
+The only thing with variables is that they do not persist from session to session. If you close Tinker, you will lose all variables assigned during that session. However the history will be available between sessions, so in true "terminal user" fashion, you can find all your previously entered commands by hitting the `↑` key (...repeatedly).
 
 ## Wrap up
 

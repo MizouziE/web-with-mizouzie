@@ -3,6 +3,7 @@ copyright: made by MizouziE
 baseURL: https://mizouzie.github.io/
 title: web with mizouzie
 paginate: 5
+disqusShortname: web-with-mizouzie
 
 menu:
     main:

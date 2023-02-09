@@ -34,7 +34,7 @@ Whatever your choice of database, there will be an image for you to pull and wor
 
 ## How does a MariaDB container work?
 
-Like we saw before, the MariaDB container will just be like a stand-alone computer on the network that runs the version of MariaDB that you specify when you provide Docker with the image that you desire. If you [take a look at the official documentation for tags](https://hub.docker.com/_/mariadb/tags), you will see pages and pages of differnet versions that are available to suit any need imaginable.
+Like we saw before, the MariaDB container will just be like a stand-alone computer on the network that runs the version of MariaDB that you specify when you provide Docker with the image that you desire. If you [take a look at the official documentation for tags](https://hub.docker.com/_/mariadb/tags), you will see pages and pages of different versions that are available to suit any need imaginable.
 
 The official docs also give nice and clear instructions on setting up a basic instance, but I remember that the very first time I read them and followed them, I did not exactly know what I was doing or why it worked. I aim to make all that clear below!
 
@@ -117,11 +117,11 @@ However... I find this a little cumbersome for smooth development, so I much pre
 
 ### Networking containers
 
-Keeping things separate is kind of the essence of docker containers, but they're not much use if they can't communicate with one another. This is nice and straightforward to acieve by networking.
+Keeping things separate is kind of the essence of docker containers, but they're not much use if they can't communicate with one another. This is nice and straightforward to achieve by networking.
 
 Upon creating the MariaDB container above, it automatically made a bridge network with the host machine to expose the ports found by searching through the output of `docker inspect`, which is typically 3306, but was 5000 in our example. It gets a little out of that scope when we want to connect another service to both the MariaDB container and our host machine. This is where we must create a network which will connect all three.
 
-Networking in docker treats the network itself as a container that you can add other containers to. The only difference is that it is noticably more simple to set up. Just the following command, and we're good to go:
+Networking in docker treats the network itself as a container that you can add other containers to. The only difference is that it is noticeably more simple to set up. Just the following command, and we're good to go:
 
 ```sh
 docker network create <name-of-your-network>
@@ -278,7 +278,7 @@ Although it feels at first as a lot to learn, what it boils down to is having yo
 
 Also as a lot of applications are deployed to production using docker, so having a local development repository with as close to production environment variables is always a plus.
 
-I am not against having a DBMS installed locally at all, but having one also means that it needs to be managed and upgraded by you, whereas using prefabricated recipies from the open source community means that you can simply always _start_ with the optimal setup.
+I am not against having a DBMS installed locally at all, but having one also means that it needs to be managed and upgraded by you, whereas using prefabricated recipes from the open source community means that you can simply always _start_ with the optimal setup.
 
 ## Summary
 
