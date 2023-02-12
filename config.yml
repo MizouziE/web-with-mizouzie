@@ -32,7 +32,7 @@ params:
 
     defaultTheme: auto
     # disableThemeToggle: true
-    ShowShareButtons: false
+    ShowShareButtons: true
     ShowReadingTime: true
     displayFullLangName: true
     ShowBreadCrumbs: true
