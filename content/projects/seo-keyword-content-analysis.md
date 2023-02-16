@@ -9,6 +9,7 @@ image: "/images/seo-key-content.png"
 tags:
 - documentation
 - laravel
+hideMeta: true
 ---
 
 
