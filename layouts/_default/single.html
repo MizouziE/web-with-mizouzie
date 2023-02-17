@@ -18,7 +18,8 @@
     </div>
     {{- end }}
   </header>
-  {{- $isHidden := .Params.cover.hidden | default .Site.Params.cover.hiddenInSingle | default .Site.Params.cover.hidden }}
+  {{- $isHidden := .Params.cover.hidden | default .Site.Params.cover.hiddenInSingle | default .Site.Params.cover.hidden
+  }}
   {{- partial "cover.html" (dict "cxt" . "IsHome" false "isHidden" $isHidden) }}
   {{- if (.Param "ShowToc") }}
   {{- partial "toc.html" . }}
@@ -26,11 +27,20 @@
 
   {{- if .Content }}
   <div class="post-content">
-  {{ .Content }}
+    {{ .Content }}
   </div>
   {{- end }}
 
   <footer class="post-footer">
+    {{ $related := .Site.RegularPages.Related . | first 5 }}
+    {{ with $related }}
+    <h3>See Also</h3>
+    <ul>
+      {{ range . }}
+      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+      {{ end }}
+    </ul>
+    {{ end }}
     {{- if .Params.tags }}
     <ul class="post-tags">
       {{- range ($.GetTerms "tags") }}
