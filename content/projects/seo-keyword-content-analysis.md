@@ -12,4 +12,4 @@ tags:
 hideMeta: true
 ---
 
-
+<meta http-equiv="refresh" content="0; url=https://mizouzie.github.io/docs-seo-key-content/"/>
