@@ -30,7 +30,7 @@ Seemingly controversial advice to give, but hear me out.
 
 When coding, at least learning to code, you will not only find yourself facing brand new subject matter constantly, but often trying to implement that new thing at the same time. The code you write is always to solve a problem and there are always a multitude of ways to solve it. You'll have to choose which path you take according to other dependencies and the structure you're using. You'll need to think the desired process through and break it down into small enough steps before writing a single line. Sometimes you will require the help of an extra plugin or library and therefore you will need to understand how that works in itself so that you can use it effectively. Already we've faced more decisions than we can shake a stick at and we don't even have anything written to show for it.
 
-So you start to write. Already slightly strained in the mental sense, you hit a snag. The code doesn't seem to work the way you predicted. Frustration sets in a bit faster than usual and you go on a tangent to try and solve this unpredicted obstacle. 15 minutes you didn't have pass and you're back on track. Another snag...
+So you start to write. Already slightly strained in the mental sense, you hit a snag. The code doesn't seem to work the way you predicted. Frustration sets in a bit faster than usual and you go on a tangent to try and solve this unpredictable obstacle. 15 minutes you didn't have pass and you're back on track. Another snag...
 
 Rinse and repeat.
 

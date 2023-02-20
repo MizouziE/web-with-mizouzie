@@ -3,16 +3,17 @@ put/name it to be accepted by the template,
  so it is copied into the template also */
 
 svg {
-    box-shadow: 2px 2px 4px rgba(209, 164, 79, 0.64);
+    filter: drop-shadow(2px 2px 4px rgba(209, 164, 79, 0.64));
     transition: all 0.3s ease-in-out 0s;
 }
 
 svg:hover,
 svg:focus {
     transform: translateY(-6px);
-    box-shadow: 2px 8px 4px rgba(209, 164, 79, 0.64);
+    filter: drop-shadow(2px 8px 4px rgba(209, 164, 79, 0.64));
+    color: var(--secondary);
 }
- 
+
 .nav ul li a:hover,
 .nav ul li a:focus {
     transition: all 0.3s ease-in-out 0s;
@@ -36,7 +37,8 @@ svg:focus {
     -webkit-backdrop-filter: blur(7.1px);
 }
 
-.post-entry, .post-tags li {
+.post-entry,
+.post-tags li {
     transition: all .3s ease-in-out 0s;
     box-shadow: 2px 2px 4px rgba(209, 164, 79, 0.64);
 }

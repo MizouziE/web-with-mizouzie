@@ -52,13 +52,16 @@
     {{- partial "post_nav_links.html" . }}
     {{- end }}
     {{- if (and .Site.Params.ShowShareButtons (ne .Params.disableShare true)) }}
+    <br>
+    <br>
+    <h4>Share this Post:</h4>
     {{- partial "share_icons.html" . -}}
+    <br><br>
     {{- end }}
   </footer>
 
   {{- if .Site.DisqusShortname }}
   <div class="" style="margin-top: 1rem;">
-    <h4>Leave a comment</h4>
     {{ template "_internal/disqus.html" . }}
   </div>
   {{- end }}
