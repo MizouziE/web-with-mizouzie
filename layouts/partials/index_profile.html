@@ -21,11 +21,14 @@
         {{- with site.Taxonomies.tags }}
         <h4 style="margin: 15px auto ;">Topics you will find here</h4>
         <div class="buttons">
-            {{- range . }}
+            {{- range first 7 .ByCount }}
             <a class="button" href="{{ .Page.Permalink }}" rel="noopener" title="{{ .Page.LinkTitle }}">
                 <span class="button-inner">{{ .Page.LinkTitle }}</span>
             </a>
             {{- end }}
+        </div>
+        <div class="buttons">
+            <a href="/tags" class="button"><span class="button-inner">See All</span></a>
         </div>
         {{- end }}
     </div>

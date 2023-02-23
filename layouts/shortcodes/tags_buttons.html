@@ -1,0 +1,9 @@
+{{- with site.Taxonomies.tags }}
+<div class="buttons">
+    {{- range . }}
+    <a class="button" href="{{ .Page.Permalink }}" rel="noopener" title="{{ .Page.LinkTitle }}">
+        <span class="button-inner">{{ .Page.LinkTitle }}</span>
+    </a>
+    {{- end }}
+</div>
+{{- end }}
