@@ -1,6 +1,7 @@
 ---
 Title: Contact
 type: list
+ShowBreadcrumbs: false
 ---
 
 

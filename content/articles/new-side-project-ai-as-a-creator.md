@@ -38,9 +38,9 @@ It has been surprisingly inexpensive to use too. The table below shows some of m
 
 ### The present
 
-The site itself is _mostly_ a single page kind of thing, but there are a couple of supplimentary pages for the moment that just provide a little extra context if desired.
+The site itself is _mostly_ a single page kind of thing, but there are a couple of supplementary pages for the moment that just provide a little extra context if desired.
 
-There is not a huge amount of content thus far, but I thought it was enough to make a start. It was also a great excuse for me to practise my front end abbilities even just in the realms of HTML, CSS and minimal JS. As a predominantly back end developer, I need to seize every opportunity I get! That mixed with my undeniable soft-spot for the arts meant that I just couldn't sit on this pile of genuine creativity, it had to be shared.
+There is not a huge amount of content thus far, but I thought it was enough to make a start. It was also a great excuse for me to practice my front end abilities even just in the realms of HTML, CSS and minimal JS. As a predominantly back end developer, I need to seize every opportunity I get! That mixed with my undeniable soft-spot for the arts meant that I just couldn't sit on this pile of genuine creativity, it had to be shared.
 
 It is a collection of:
 - Stories
@@ -59,7 +59,7 @@ The site will definitely be a rolling project and I already keep a notepad where
 
 > Each entry should have a button to share **just** that entry, perhaps meaning that I will have to create an individual page for each entry and just display them all as one.
 
-The possiblities are quite exciting and having a seemingly endless stream of content really takes the pressure off from having to write it like I write the articles on this site. I hope to explore and learn a great deal in terms of design, UI and UX.
+The possibilities are quite exciting and having a seemingly endless stream of content really takes the pressure off from having to write it like I write the articles on this site. I hope to explore and learn a great deal in terms of design, UI and UX.
 
 ## Outcome
 
