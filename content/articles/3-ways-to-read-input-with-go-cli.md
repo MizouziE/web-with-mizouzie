@@ -73,7 +73,7 @@ type Reader interface {
 
 Bufio wraps this type in a buffer which gathers and temporarily holds the data before sending it along the line all together as one object, rather than streaming it.
 
-We also call upon the "os" package early on, in this case for the `os.Stdin` function which effectively stands for <u>**o**</u>perating <u>**s**</u>ystem <u>**St**</u>an<u>**d**</u> <u>**in**</u>put. This is being called as the argument for the `NewReader()` function to tell the reader to accept input from the console.
+We also call upon the "os" package early on, in this case for the `os.Stdin` function which effectively stands for <u>**o**</u>perating <u>**s**</u>ystem <u>**St**</u>an<u>**d**</u>ard <u>**in**</u>put. This is being called as the argument for the `NewReader()` function to tell the reader to accept input from the console.
 
 Once created, this reader object has access to a few functions where you can specify exactly how it reads. We will use it to read the user's input from the command line. To do so we call the `ReadString()` function, in which we have to specify the delimiter which tells the function "that's the end". Let's build on what we had earlier.
 
