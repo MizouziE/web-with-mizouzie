@@ -10,7 +10,7 @@ If you have a short message or question, drop a DM via [Twitter](https://twitter
 
 
 #### Email
-For enquiries or longer messages, please [email me](mailto:s.anglin@live.co.uk). 
+For enquiries or longer messages, please [email me](mailto:info@mizouzie.dev). 
 
 
 #### LinkedIn
