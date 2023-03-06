@@ -1,6 +1,6 @@
 ---
 title: Common Function Comparisons in PHP
-description: 
+description: How do you decide between two functions that, at a glance, seem to do the same thing? Let's pick apart the differences to try and make it easier.
 draft: false
 date: "2023-03-04"
 categories:
@@ -62,22 +62,15 @@ With 1735 functions being available, surely some must overlap or be similar. In 
 
 Looking through [Exakat](https://www.exakat.io/en/the-100-php-functions-in-2022/)'s _top 100 php functions 2022_, we can see a few likely candidates to choose from. Lets take:
 
-- [str_replace()](https://www.php.net/manual/en/function.str-replace)
 - [implode()](https://www.php.net/manual/en/function.implode)
 - [count()](https://www.php.net/manual/en/function.count)
-- [substr()](https://www.php.net/manual/en/function.substr)
 - [explode()](https://www.php.net/manual/en/function.explode)
 - [trim()](https://www.php.net/manual/en/function.trim)
 - [strtr()](https://www.php.net/manual/en/function.strtr)
-- [array_merge()](https://www.php.net/manual/en/function.array-merge)
 
 > <sup>click on any to see the official definitions<sup>
 
 ## Compared to their closest cousins
-
-### str_replace() vs preg_replace()
-
-The same, but regular expressions can make it more precise (and complicated!).
 
 ### implode() vs join()
 
@@ -139,17 +132,56 @@ This can be fine for a single call and if there is not an enormous number of ins
 
 The optimized second option flips the original and checks only for a **non-falsey** value which is satisfied by the very first counter beyond 0. After that first 1 is counted, the rest of the code can move on and display the non-existent case or the existent case accordingly. We are effectively only "counting" a maximum of the number of calls to count as opposed to counting the number of calls to count **multiplied** by the number of instances of the counted records in the database. That time can add up! Count one or zero and move on.
 
-### substr() 
-
 ### explode() vs str_split() vs str_tok()
 
-These functions are all about creating an iterable out of a given string
+These functions are all about creating an iterable out of a given string, each splitting the string at a chosen point. The way that point is chosen differs depending on which function is called.
+
+- `explode()` searched through the string for a given sub-string and splits around that
+- `str_split()` simply counts out the specified number of bytes (i.e. characters in the ASCII set) and divides the string there, then starts counting again from the split to find the next split location.
+- `str_tok()` the same as explode() but does not return the whole split up string at once.
+
+The first two will return an array of the "pieces" of strings they have cut. This is handy when you need to derive a string from a url string, for example you can call:
+
+```php
+>>> $string = "https://mizouzie.dev/articles/that/help/developers/learn";
+=> "https://mizouzie.dev/articles/that/help/developers/learn"
+
+>>> explode('/', $string);
+=> [
+     "https:",
+     "",
+     "mizouzie.dev",
+     "articles",
+     "that",
+     "help",
+     "developers",
+     "learn",
+   ]
+```
+
+While with str_split() you will give an integer value (n) and it splits the string after each nth character.
+
+The function str_tok() is the outlier here as it only returns the first section (or token, as the name suggests) on it's first call. The interesting thing is that it will return the **next** section on the next call, and the next one only on the next call after that and so on until it has none left to return and returns `false`. This makes it ideal for use within a loop, as the returning of a falsey value will break out of the loop. It just removes the step of _creating_ the iterable array to _then_ do something with it. You can just get right down to business with this one.
 
 ### trim() vs ltrim() vs rtrim() vs preg_replace()
 
+Trimming strings is a common necessity as many strings have invisible and undesirable baggage in the form of whitespace either lurking before or behind them. A string ending in a _new line_ or _carriage return_ character can wreak havoc on simple processing functions or scripts, so it is always wise to sanitize them with some sort of trim at the very least.
+
+- `trim()` indiscriminately removes whitespace from in front and behind a string
+- `ltrim()` & `rtirm()` remove whitespace from the left and right of a string respectively
+- `preg_replace()` requires a little knowhow of the dark-art of regular expressions
+
+Should you be familiar or at least comfortable with regex, you may specify exactly what type of whitespace is removed, where it is removed from or even only remove it given certain conditions. It is like the super-max-pro Premium fully licensed version of the trimming functions before it, as well as much more.
+
 ### strtr() vs str_replace()
 
-### array_merge() vs +=
+For me, these two do the same thing. Search a string for a given substring, and then return that string with the substring replaced with a given alternative substring. Both accept arguments as strings or arrays, but there is a slight difference in _how_ they accept the arrays.
+
+The arrays passed to str_replace() (notice the plural **arrays**) will be one array of search values and a second array of the search value's replacements. The search values and replacements will need to match up according to index in order to be executed properly.
+
+The **single** array passed to strtr() feels like a shortcut as the index _is_ the search value and the value is the replacement. i.e. `['from this' => 'to that']`.
+
+The usefulness of this is determined by how you go about construction your arrays to be passed. In many cases it may be easier or faster to construct a single array with string indexes. For me, that option just feels more sensible, less room for error.
 
 ## Summary
 
