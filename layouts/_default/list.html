@@ -57,10 +57,16 @@
         {{- .Title }}
         {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
       </h2>
+      {{- if .Param "_link" }}
+      <a href="{{ .Params._link }}" class="button buy-now">Buy Now</a>
+      {{- end }}
     </header>
     {{- if (ne (.Param "hideSummary") true) }}
     <section class="entry-content">
       <p>{{ .Description | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
+      {{- if .Param "price"}}
+      <p>Price: {{ .Params.price }}</p>
+      {{- end }}
     </section>
     {{- end }}
     {{- if .Params.image }}
