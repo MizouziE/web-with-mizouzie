@@ -7,9 +7,24 @@
       {{ .Title }}
       {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
     </h1>
-    {{- if .Description }}
+    {{- if eq .Params.topic "product" }}
+    <div>
+      <table>
+        <tr>
+          <th>Price</th>
+          <th>Description</th>
+          <th>Buy Now</th>
+        </tr>
+        <tr>
+          <td>{{ .Params.price }}</td>
+          <td>{{ .Description }}</td>
+          <td><a class="button" href="{{ .Params._link }}">Click</a></td>
+        </tr>
+      </table>
+    </div>
+    {{- else if .Description }}
     <div class="post-description">
-      {{ .Description }}
+      {{ .Description }}&nbsp;
     </div>
     {{- end }}
     {{- if not (.Param "hideMeta") }}
