@@ -2,7 +2,7 @@ theme: charlolamode
 copyright: made by MizouziE
 baseURL: https://www.mizouzie.dev/
 title: web with mizouzie
-paginate: 6
+paginate: 5
 disqusShortname: web-with-mizouzie
 
 menu:
