@@ -66,10 +66,10 @@
     </header>
     {{- if (ne (.Param "hideSummary") true) }}
     <section class="entry-content">
-      <p>{{ .Description | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
       {{- if .Param "price"}}
       <p>Price: {{ .Params.price }}</p>
       {{- end }}
+      <p>{{ .Description | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
     </section>
     {{- end }}
     {{- if .Params.image }}

@@ -12,6 +12,6 @@ tags:
 - JavaScript
 - learning
 - GitHub
-hideMeta: true
 draft: true
+hideMeta: true
 ---
