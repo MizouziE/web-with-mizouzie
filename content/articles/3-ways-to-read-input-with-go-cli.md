@@ -5,11 +5,13 @@ draft: false
 date: "2023-02-23"
 categories:
 - web development
+- tutorial
 tags:
 - web dev
 - Golang
 - CLI
 - learning
+- tutorial
 ogimage:
 - /images/command-line-interface.png
 - 1024
