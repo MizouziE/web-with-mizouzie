@@ -4,6 +4,7 @@ baseURL: https://www.mizouzie.dev/
 title: web with mizouzie
 paginate: 5
 disqusShortname: web-with-mizouzie
+googleAnalytics: G-MN6WKZ3S7T
 
 menu:
     main:
