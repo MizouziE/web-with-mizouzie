@@ -5,6 +5,7 @@ draft: false
 date: "2023-03-09"
 categories:
 - web development
+- tutorial
 tags:
 - web dev
 - laravel

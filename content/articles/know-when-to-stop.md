@@ -40,7 +40,8 @@ The other important thing that I learnt was that unless the bug or issue was act
 If I'm honest, it took me a while to wrap my head around all of what was mentioned above. Actually going through the motions was a valuable experience and I'm happy with the place I've got to for now. There's definitely room for improvement, but that again is further proof that this career path is about smaller incremental improvements that eventually lead to a polished, easily maintainable and future-proof final product, be it your project or yourself.
 
 Finally, here are some books that were recommended to me that helped me get to this point, some of which I even need to finish reading myself;
+>* affiliate links, I earn a bit if you buy through these
 
-- [Atomic Habits *by* James Clear](https://jamesclear.com/atomic-habits)
-- [REWORK *by* Jason Fried & David Heinemeier Hansson](https://basecamp.com/books/rework)
-- [Lila *by* Robert M. Persig](https://en.wikipedia.org/wiki/Lila:_An_Inquiry_into_Morals)
+- [Atomic Habits *by* James Clear](https://amzn.to/3T5Qmw2)
+- [REWORK *by* Jason Fried & David Heinemeier Hansson](https://amzn.to/3FgKwC7)
+- [Lila *by* Robert M. Persig](https://amzn.to/3yutKM7)

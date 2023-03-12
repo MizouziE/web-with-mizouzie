@@ -5,6 +5,7 @@ draft: true
 date: "2023-03-02"
 categories:
 - web development
+- tutorial
 tags:
 - web dev
 - PHP
