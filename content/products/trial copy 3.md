@@ -1,17 +1,18 @@
 ---
-title: Trial product
-price: £3.50
+title: Lila
+price: £8.27
 dateMonthYear: March 2023
-description:  See what a listed product would look like
-_link: https://www.amazon.co.uk/OneOdio-Cancelling-Headphones-Bluetooth-Transparency-Black/dp/B0B7RZY38W?ref_=Oct_d_odotd_d_3_6a6533c4&pd_rd_w=Rs0tx&content-id=amzn1.sym.e5dd5dff-50d2-4d99-beff-f31c381ed1e7&pf_rd_p=e5dd5dff-50d2-4d99-beff-f31c381ed1e7&pf_rd_r=9YA4CF2EYN83YZSAW64A&pd_rd_wg=VtmLK&pd_rd_r=43a10866-70f9-45e0-93f1-6f7302063bfe
+description:  "'Zen and the Art of Motorcycle Maintenance was like a first child. Maybe that will always be the best-loved one. But this second child is the bright one. I think a lot of people will argue with some of the ideas in Lila. There may be controversy. But if people are still reading these two books a hundred years from now, I predict Lila will be the one they consider the more important' --Robert M. Pirsig"
+_link: https://amzn.to/3YEbCu0
 type: page
 topic: product
 # link: "https://enkle-word-game.github.io/enkle/"
-image: "https://www.shoutmeloud.com/wp-content/uploads/2020/09/Choose-the-Best-Affiliate-Products.jpg"
+image: "https://cdn1.mecum.com/auctions/lv0121/lv0121-451957/images/man6891-1605215811401@2x.jpg?1619889831000"
 tags:
-- JavaScript
+- metaphysics
 - learning
-- GitHub
-draft: true
+- self-care
+- learning
+draft: false
 hideMeta: true
 ---
