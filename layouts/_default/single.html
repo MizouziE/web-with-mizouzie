@@ -75,11 +75,6 @@
     <br><br>
     {{- end }}
   </footer>
-
-  {{- if .Site.DisqusShortname }}
-  <div class="" style="margin-top: 1rem;">
-    {{ template "_internal/disqus.html" . }}
-  </div>
   {{- end }}
   {{- if (.Param "comments") }}
   {{- partial "comments.html" . }}
