@@ -19,8 +19,8 @@
     {{- range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e }}{{ end }} {{- end -}}" />
 {{- end }}
 {{- /*Google */}}
+{{ partial "gdpr.html" }}
 <meta name="google-site-verification" content="psw8-5863N9APj0ZK5Lg3BMygE0vQEYIB7q2uJq-FPo" />
-{{ template "_internal/google_analytics.html" . }}
 {{- /* Open Graph */}}
 <meta property="og:image" content="{{- with .Params.ogimage }}{{ index . 0 | absURL  }}{{- else }}{{ .Site.Params.assets.ogImage | default "/images/social.png" | absURL }}{{- end }}">
 <meta property="og:image:width" content="{{- with .Params.ogimage }}{{ index . 1 }}{{- else }}{{ .Site.Params.assets.ogImageWidth | default 1190 }}{{- end }}">
