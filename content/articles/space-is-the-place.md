@@ -21,7 +21,7 @@ ogimage:
 
 Since the end of 2020, Twitter Spaces have been a feature of the social media platform, and while they've seen great popularity in some cases, some Tweeple may still not be making the most of the multitude of opportunities they can present.
 
-The easiest way to describe them is to liken them to a hybrid of a public speaking forum at an international airport longue in the guise of a podcast.
+The easiest way to describe them is to liken them to a hybrid of a public speaking forum at an international airport lounge in the guise of a podcast.
 
 ### How they work
 
