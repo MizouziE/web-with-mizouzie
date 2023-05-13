@@ -1,10 +1,11 @@
 ---
 title: How to test protected functions with PHPUnit in your Laravel app
-description: An essential part of developing an app is being able to test your code. My preferred method of testing my Laravel code is using PHPUnit and this is how I test those 'harder to reach' protected and private methods inside various classes.
+description: An essential part of developing an app is testing your code. My preferred method of testing my Laravel code is using PHPUnit and this is how I use reflection to test those 'harder to reach' protected and private methods inside classes.
 draft: false
 date: "2023-05-13"
 categories:
 - web development
+- tutorial
 tags:
 - web dev
 - laravel
@@ -29,6 +30,8 @@ A job class will often contain methods and variables that are;
 - protected
 
 As you can imagine, public methods are easy enough to test against as they are "exposed" to the outside of the class instance. It gets a little more difficult to gain access to these private and protected methods for testing, as they are intended to be called only by other methods within the class instance. They'll be things like getters and setters so that a handle() function does not get clogged up with logic for retrieving it's necessary data.
+
+When trying to run a test against such a class with private and protected methods, we will run into errors that look like the following two examples.
 
 ## Error: Call to private Some\ExampleClass::__construct() from scope Tests\Feature\Some\ExampleClassTest
 
@@ -100,10 +103,90 @@ So the class is created with no problem, but we want to test methods that are ca
 
 > Available in; PHP 5, PHP 7, PHP 8
 
+The Reflection API in PHP is a way to retrieve any and all information from a class during runtime. The way we can use it in this case is to effectively make an instantiated "copy" of the real class we wish to test, "grab" the method we wish to test from the _reflection_ of the class, and then tweak it ever so slightly to make the private function public so that we may use it from outside of the class which in this case, is from out test.
+
+Sounds simple enough...
+
+### new ReflectionClass($exampleClass)
+
+This first step is to create the reflection class on which we can make our needed modifications. There is actually a small **pre**-first step to take and that is to make a `new` instance of the class we wish to reflect and save it to a variable which we _then_ use in our call to create a `new ReflecionClass()`.
+
+```php
+
+        $exampleClass = new ExampleClass($input);
+
+        $reflection = new ReflectionClass($exampleClass);
+        
+```
+
+Now we have something to work with that is a little more malleable and we can decide next what we want from this reflection. Based on the previous examples of errors, let's look at getting:
+
+- the `__construct()`
+- or some named method like `exampleMethod()`
+
 ### getConstructor()
+
+To get the constructor (public _or_ private) so that we can feed it with whatever values we need to test against, we have this handy function which may be used as such to set the `__construct()` of the class as a useable variable:
+
+```php
+
+        $exampleClass = new ExampleClass($input);
+
+        $reflection = new ReflectionClass($exampleClass);
+        $constructor = $reflection->getConstructor();
+        
+```
 
 ### getMethod()
 
+To get the protected method that we wish to test against we have this method that can be used in a very similar way to the above:
+
+```php
+
+        $exampleClass = new ExampleClass($input);
+
+        $reflection = new ReflectionClass($exampleClass);
+        $method = $reflection->getMethod('exampleMethod');
+        
+```
 ### setAccessible()
 
+With both the the `get` helpers shown, all we are doing is saving the methods **as they are** to a variable. They haven't yet been unlocked for us to use as we please, but this is where this method steps in and shows the real benefit of this whole process. As easily as this, we can change the methods accessibility so that future calls to it from our non-matching namespace do not set off any errors.
+
+```php
+
+        $exampleClass = new ExampleClass($input);
+
+        $reflection = new ReflectionClass($exampleClass);
+        $method = $reflection->getMethod('exampleMethod');
+        $method->setAccessible(true);
+
+```
 ### invokeArgs()
+
+Now that we have a useable version of the protected/private method we wish to test the output of, we can call upon that method using this function which also feeds the method the needed parameters (arguments). Similarly to the `setAccessible()` we chain it on and it expects two arguments:
+
+1. The object to invoke upon. (null can be used here in the case of static methods)
+1. An array of arguments that the method to be invoked expects.
+
+
+```php
+
+        $exampleClass = new ExampleClass($input);
+
+        $reflection = new ReflectionClass($exampleClass);
+        $method = $reflection->getMethod('exampleMethod');
+        $method->setAccessible(true);
+
+        $result = $method->invokeArgs($exampleClass, [$arg1, $arg2, ...]);
+
+        // Make assertions against the resulting output like...
+        // $this->assertEquals('expected result', $result);
+
+```
+
+## Run your tests
+
+That's it! After just a few extra lines of code, you are now able to make assertions in your PHPUnit test suites against otherwise inaccessible functions and you can sleep a little easier tonight knowing that the deepest trenches of your application are fully covered and there will not be any unwelcome bugs!
+
+... at least not from the parts you wrote proper tests for.
