@@ -16,7 +16,7 @@ ogimage:
 - 2794
 ---
 
-![A wise old senior dev](/images/senior-dev.jpg)
+<img loading="lazy" src="/images/senior-dev.jpg" alt="A wise old senior dev" height="2794" width="2032"/>
 
 ## Senior Developers
 
