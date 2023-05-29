@@ -16,7 +16,7 @@ ogimage:
 - 2794
 ---
 
-<img loading="lazy" src="/images/senior-dev.jpg" alt="A wise old senior dev" height="2794" width="2032"/>
+<img loading="lazy" src="/images/senior-dev.jpg" alt="A wise old senior dev" height="990" width="720"/>
 
 ## Senior Developers
 
