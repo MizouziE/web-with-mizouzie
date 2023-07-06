@@ -43,7 +43,7 @@ Safe to say nothing went like I imagined...
 
 ### Project #1
 
-This is a work project, fresh Laravel app that I spent the previous few days designing and laying out the models and database structure for. I had to start some basic tests as I'd kept everything fairly loose while figuring out what kind of relationships the models all needed between them. Now that I was more settled, it was time to write the tests to ensure that further changes don't break unexpected things.
+This is a work project, fresh Laravel app that I spent the previous few days designing and laying out the models and database structure for. I had to start some basic tests as I'd kept everything fairly loose while figuring out what kind of relationships the models all needed between them. Now that I was more settled, it was time to write the tests to ensure that further changes don't break things.
 
 So I write my first test, easy enough. Goes green after not too many errors. Second test the same. Then I want to refactor early to avoid repeating myself in populating the database with data and an authenticated user. I'd done this before I'm sure, what I believe I need is:
 
@@ -64,6 +64,19 @@ But it turned out that this isn't what I needed. I am somehow passing a string t
 
 I know it's possible to run a `setup()` method to run what ever seeding you want or create a user that will be _reusable_ between tests. I know because I did it recently. It's very frustrating that I can't recall it right now.
 
+> Edit, the following day: I found what my problem was in the docs. I should have used `setUp()` with an uppercase "U" and also called `parent::setUp()` within my method. I found it at the bottom of [this section about testing](https://laravel.com/docs/10.x/testing#creating-tests). What I actually needed was the following:
+```php
+    private User $user;
+    private Collection $clients;
+
+    public function setUp(): void
+    {
+        parent::setUp();
+        $this->user = User::factory()->create();
+        $this->clients = Client::factory(50)->create();
+    }
+```
+
 I could just repeat myself for the moment and come back to refactor later having referred to the docs or even my older code. So let me write some tests using the `$this->actingAs($user)` to make sure I wasn't getting redirected to a login route. Oh, there is no login route. I had only installed Breeze, Laravel's quick and easy solution to out-of-the-box auth, on a branch that got scrapped after a front end re-design. Great... No matter, even though I cannot quickly download and install Breeze again without internet, I can just `git cherry-pick` the commit from the abandoned branch on which I had previous installed it. As it is mostly new files and my current `routes/web.php` file is untouched, then the changes brought shouldn't break anything.
 
 I impressed myself that I managed to do this without Googling anything, if I'm honest. It worked. The thing I did not anticipate was all the changes to tailwind that would require another `npm install`... damn it. My front end was now broken and I could not run `npm run dev` without it crashing. I had a hacky way of circumventing this that involved commenting out some lines in the `postcss.config.js` file but it was ugly, and I even tried just abandoning the `middleware('auth')` on the routes altogether to just write some tests but I was pissing in the wind at this point. Move on Sam.
@@ -74,7 +87,7 @@ Never mind, I have a backup for this situation.
 
 This is  a project I'm working on for a friend that is a partly automated email sending app. I have already written all the guts of it and it sends what we want and collects email addresses etc and that's all great. Now it just needs the front end polish, which I typically hate, but He made a template using MailChimp email builder and all I had to do was sift through it and pick out the various parts and styling that we wanted in our email.
 
-I had glanced at the HTML when I copied it and it looked ok-ish. But on closer inspection it was a straight up mess. Toxic even. Style attributes in almost all HTML tags. The whole thing was one big table with forced layout sizes. Not only that, the entire `<body>...</body>` was written on  a single line and even with my autoformatter, I could not get it into a sensible layout, so picking out bits and editting others was a horrndous amount of side scrolling.
+I had glanced at the HTML when I copied it and it looked ok-ish. But on closer inspection it was a straight up mess. Toxic even. Style attributes in almost all HTML tags. The whole thing was one big table with forced layout sizes. Not only that, the entire `<body>...</body>` was written on  a single line and even with my autoformatter, I could not get it into a sensible layout, so picking out bits and editing others was a horrendous amount of side scrolling.
 
 Oh and did I mention that the kid sitting in the seat in front of me was some kind of jack-in-the-box? Every time he jumped, my thumb would accidentally swipe over the tracking pad and loose the place I had just painstakingly scrolled to. I tried working with the laptop on my actual lap, as the name may suggest is easy to do so, but it's a poxy little 14" screen so it was very uncomfortable. Did not help that the style of plane seat arrangement was inline with a tin of sardines. No legroom whatsoever       .
 
